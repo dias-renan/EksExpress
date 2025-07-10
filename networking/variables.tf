@@ -29,13 +29,13 @@ variable "tags" {
 
 variable "vpc" {
   type = object({
-    name                    = string
-    cidr_block              = string
-    internet_gateway_name   = string
-    nat_gateway_name   = string
-    public_route_table_name = string
+    name                     = string
+    cidr_block               = string
+    internet_gateway_name    = string
+    nat_gateway_name         = string
+    public_route_table_name  = string
     private_route_table_name = string
-    eip_name = string
+    eip_name                 = string
     public_subnets = list(object({
       name                    = string
       cidr_block              = string
@@ -51,13 +51,13 @@ variable "vpc" {
   })
 
   default = {
-    name                    = "nsse-vpc"
-    cidr_block              = "10.0.0.0/24"
-    internet_gateway_name   = "internet_gateway"
-    public_route_table_name = "public_route_table"
+    name                     = "nsse-vpc"
+    cidr_block               = "10.0.0.0/24"
+    internet_gateway_name    = "internet_gateway"
+    public_route_table_name  = "public_route_table"
     private_route_table_name = "private_route_table"
-    nat_gateway_name   = "nat-gateway"
-    eip_name = "nat-gateway-eip"
+    nat_gateway_name         = "nat-gateway"
+    eip_name                 = "nat-gateway-eip"
     public_subnets = [{
       name                    = "public_us_east_1a"
       cidr_block              = "10.0.0.0/27"

@@ -6,5 +6,5 @@ resource "aws_subnet" "private" {
   availability_zone       = var.vpc.private_subnets[count.index].availability_zone
   map_public_ip_on_launch = var.vpc.private_subnets[count.index].map_public_ip_on_launch
 
-  tags = {Name = "${var.vpc.name}-${var.vpc.private_subnets[count.index].name}"}
+  tags = { Name = "${var.vpc.name}-${var.vpc.private_subnets[count.index].name}" }
 }
